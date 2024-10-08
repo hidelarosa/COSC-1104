@@ -12,7 +12,7 @@ def user_input():
         
     return int(x)
 
-def is_prime(number): # Check if the input number is prime
+def is_prime(number): # Check if the input number is prime ## Code is reference to this link https://www.scholarhat.com/tutorial/python/python-prime-number#:~:text=The%20%27sympy%27%20library%20in%20Python,number%7D%20is%20a%20prime%20number.
     if number <= 1:
         return False
     for i in range(2, int(number**0.5) + 1):  # Check divisibility up to the square root of n
@@ -43,7 +43,7 @@ if is_prime(number):
     print(f"{number} is a prime number.")   
     
 else:
-    def factors(number):
+    def factors(number): ## Code if reference to this link https://www.youtube.com/watch?v=AAc1k3nSSsY
         l = []
         for i in range(1, number+1):
                 if number % i == 0:
