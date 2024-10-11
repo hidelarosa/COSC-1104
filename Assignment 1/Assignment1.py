@@ -28,11 +28,14 @@ def is_next_prime(number): # find the next prime number
         number = number + 1 
 
 def is_before_prime(number): # find the prime number before the input number
-    number = number - 1
-    while True:
-        if is_prime(number): # check if the next number is prime
-            return number
+    if number < 3: # No prime number before 1 & 2
+        return None
+    else:
         number = number - 1
+        while True:
+            if is_prime(number): # check if the next number is prime
+                return number
+            number = number - 1
 
 
 # Get user input
@@ -57,7 +60,9 @@ if is_next_prime(number):
     print(f"{next_prime} is the next prime number of {number}. ")
 
 before_prime = is_before_prime(number)
-if is_before_prime(number):
+if before_prime is None:
+    print(f"No prime number before {number}.")
+else:
     print(f"{before_prime} is the prime number before {number}. ") 
 
 
