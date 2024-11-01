@@ -37,8 +37,8 @@ if __name__ == '__main__':
     # User Inputs
     while True:
         try:
-            min_vcpu = int(input("Enter the minimum required CPU cores (integer): "))
-            max_vcpu = input("Enter the maximum required CPU cores (integer, press Enter for no limit): ")
+            min_vcpu = int(input("Enter the minimum required CPU cores: "))
+            max_vcpu = input("Enter the maximum required CPU cores (press Enter for no limit): ")
             max_vcpu = int(max_vcpu) if max_vcpu else None
             break
         except ValueError:
@@ -46,8 +46,8 @@ if __name__ == '__main__':
  
     while True:
         try:
-            min_memory = float(input("Enter the minimum required memory in GiB (float): "))
-            max_memory = input("Enter the maximum required memory in GiB (float, press Enter for no limit): ")
+            min_memory = float(input("Enter the minimum required memory in GiB : "))
+            max_memory = input("Enter the maximum required memory in GiB (press Enter for no limit): ")
             max_memory = float(max_memory) if max_memory else None
             break
         except ValueError:
