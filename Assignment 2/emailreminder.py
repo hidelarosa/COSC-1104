@@ -9,7 +9,6 @@ import schedule
 import time
 from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
-import os
 
 def send_email():
     try:
