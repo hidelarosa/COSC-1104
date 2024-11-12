@@ -4,7 +4,6 @@
 
 # Python - Sending Email At A Specific Time Using smtplib
 
-
 import smtplib
 import schedule
 import time
@@ -23,8 +22,6 @@ def send_email():
 
         # Retrieve the app password from environment variables
         app_password = 'tqpi anlv svdl rnnw'
-        if not app_password:
-            raise ValueError("GMAIL_APP_PASSWORD environment variable not set!")
 
         server = smtplib.SMTP('smtp.gmail.com', 587)
         server.starttls()
@@ -40,7 +37,7 @@ def send_email():
         print(f"Failed to send email: {e}")
 
 # Schedule the email to be sent daily at 09:00 AM
-schedule.every().day.at("02:06").do(send_email)
+schedule.every().day.at("09:00").do(send_email)
 
 # Run the scheduled task
 while True:
