@@ -20,7 +20,6 @@ def send_email():
         body = 'This is your weekly reminder to track your hours for the whole week'
         msg.attach(MIMEText(body, 'plain'))
 
-        # Retrieve the app password from environment variables
         app_password = 'tqpi anlv svdl rnnw'
 
         server = smtplib.SMTP('smtp.gmail.com', 587)
