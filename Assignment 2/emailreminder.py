@@ -35,8 +35,8 @@ def send_email():
     except Exception as e:
         print(f"Failed to send email: {e}")
 
-# Schedule the email to be sent daily at 09:00 AM
-schedule.every().day.at("09:00").do(send_email)
+# Schedule the email to be at 09:00 AM every Monday
+schedule.every().monday.at("09:00").do(send_email)
 
 # Run the scheduled task
 while True:
